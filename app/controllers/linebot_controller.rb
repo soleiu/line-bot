@@ -10,7 +10,6 @@ class LinebotController < ApplicationController
     unless client.validate_signature(body, signature)
       head :bad_request
     end
-    "aaa"
     events = client.parse_events_from(body)
     events.each { |event|
       case event
