@@ -4,7 +4,6 @@ task :update_feed => :environment do
   require 'open-uri'
   require 'kconv'
   require 'rexml/document'
-  pp "bbb"
 
   client ||= Line::Bot::Client.new { |config|
     config.channel_secret = ENV["LINE_CHANNEL_SECRET"]

@@ -57,7 +57,7 @@ class LinebotController < ApplicationController
               "ありがとう！！！\n優しい言葉をかけてくれるあなたはとても素敵です(^^)"
           when /.*(こんにちは|こんばんは|初めまして|はじめまして|おはよう).*/
             push =
-              "こんにちは。\n声をかけてくれてありがとう\n今日があなたにとっていい日になりますように(^^)"
+              "こんにちは。\n声をかけてくれてありがとう\n今日があなたにとっていい日になりますように(*^^*)"
           else
             per06to12 = doc.elements[xpath + 'info/rainfallchance/period[2]l'].text
             per12to18 = doc.elements[xpath + 'info/rainfallchance/period[3]l'].text
@@ -66,14 +66,14 @@ class LinebotController < ApplicationController
               word =
                 ["雨だけど元気出していこうね！",
                  "雨に負けずファイト！！",
-                 "雨だけどああたの明るさでみんなを元気にしてあげて(^^)"].sample
+                 "雨だけどああたの明るさでみんなを元気にしてあげて(*^^)*"].sample
               push =
                 "今日の天気？\n今日は雨が降りそうだから傘があった方が安心だよ。\n　  6〜12時　#{per06to12}％\n　12〜18時　 #{per12to18}％\n　18〜24時　#{per18to24}％\n#{word}"
             else
               word =
-                ["天気もいいから一駅歩いてみるのはどう？(^^)",
+                ["天気もいいから一駅歩いてみるのはどう？(o^^o)",
                  "今日会う人のいいところを見つけて是非その人に教えてあげて(^^)",
-                 "素晴らしい一日になりますように(^^)",
+                 "素晴らしい一日になりますよ〜に!!(^^)",
                  "雨が降っちゃったらごめんね(><)"].sample
               push =
                 "今日の天気？\n今日は雨は降らなさそうだよ。\n#{word}"
@@ -81,7 +81,7 @@ class LinebotController < ApplicationController
           end
           # テキスト以外（画像等）のメッセージが送られた場合
         else
-          push = "テキスト以外はわからないよ〜(；；)"
+          push = "テキスト以外はわからないよ〜(´・ω・｀)"
         end
         message = {
           type: 'text',
