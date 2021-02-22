@@ -8,7 +8,7 @@ class LinebotController < ApplicationController
     body = request.body.read
     signature = request.env['HTTP_X_LINE_SIGNATURE']
     unless client.validate_signature(body, signature)
-      return head :bad_request
+      head :bad_request
       pp "aaa"
     end
     events = client.parse_events_from(body)
