@@ -54,7 +54,7 @@ class LinebotController < ApplicationController
           when /.*(おやすみ|また明日ね|バイバイ|ばいばい|).*/
             push =
               "うん、また連絡待ってます(^-^)/"
-            when /.*(ぽけもん|ポケモン|pokemon|).*/
+          when /.*(ぽけもん|ポケモン|pokemon|).*/
               pp "AAa"
             push =
               "ポケモン何が好きなの？私はゲンガーが好き！"
