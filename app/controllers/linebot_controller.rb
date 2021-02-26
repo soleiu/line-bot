@@ -60,6 +60,9 @@ class LinebotController < ApplicationController
           when /.*(ポケモン|pokemon|ぽけもん).*/
             push = 
               "私はゲンガーが好き！あなたは何が好き？？"
+          when /.*(お腹空いた|おなか減った|おなか空いた).*/
+            push =
+              "今日のご飯は何かなー？楽しみ(o^^o)\n今日はパスタの気分！！！"
           else
             per06to12 = doc.elements[xpath + 'info/rainfallchance/period[2]l'].text
             per12to18 = doc.elements[xpath + 'info/rainfallchance/period[3]l'].text
