@@ -67,7 +67,7 @@ class LinebotController < ApplicationController
             word =
               ["うどん好きなの？私もすごく好き！今日も食べる！",
                "手作りうどん食べたいなぁ！",
-               "どんなうどんが好きなの？"
+               "どんなうどんが好きなの？",
                "讃岐うどんはどうー？？"].sample
             push = 
               "お蕎麦も好き?\n#{word}"
@@ -76,7 +76,7 @@ class LinebotController < ApplicationController
               ["今日は何か素敵なことあった？",
                "お昼は今日は何食べたの？",
                "また漫画読みに行かなくちゃ！",
-               "いつもいつも連絡ありがとうo(^-^)o"
+               "いつもいつも連絡ありがとうo(^-^)o",
                "またシバエナガとお散歩してね☆"].sample
             push =
               "お仕事お疲れ様(*^^*)！このラインで少しでも癒されます様に！\n#{word}"
