@@ -87,7 +87,9 @@ class LinebotController < ApplicationController
             word = 
               ["うん！おやすみなさーい！いい夢見れます様に(^ ^)",
                "もう寝ちゃうの？まだお話ししたいなぁ〜",
-               "あったかくして寝るんだよ^ - ^"].sample
+               "あったかくして寝るんだよ^ - ^",
+               "明日夢のお話し聞かせてね！"
+              ].sample
             push = 
               "また明日ね〜　\n#{word}"
           else
