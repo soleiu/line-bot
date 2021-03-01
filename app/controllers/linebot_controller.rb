@@ -40,7 +40,6 @@ class LinebotController < ApplicationController
               push =
                 "明日の天気？\n明日は雨が降らない予定だよ(^^)\nまた明日の朝の最新の天気予報で雨が降りそうだったら教えるね！"
             end
-          end
           when /.*(明後日|あさって).*/
             per06to12 = doc.elements[xpath + 'info[3]/rainfallchance/period[2]l'].text
             per12to18 = doc.elements[xpath + 'info[3]/rainfallchance/period[3]l'].text
