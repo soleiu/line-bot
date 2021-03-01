@@ -79,7 +79,7 @@ class LinebotController < ApplicationController
                "いつもいつも連絡ありがとうo(^-^)o"
                "またシバエナガとお散歩してね☆"].sample
             push =
-              "お仕事お疲れ様(*^^*)！このラインで少しでも癒されます様に！"\n#{word}"
+              "お仕事お疲れ様(*^^*)！このラインで少しでも癒されます様に！\n#{word}"
           else
             per06to12 = doc.elements[xpath + 'info/rainfallchance/period[2]l'].text
             per12to18 = doc.elements[xpath + 'info/rainfallchance/period[3]l'].text
