@@ -83,6 +83,13 @@ class LinebotController < ApplicationController
           when /.*(めぐちゃん).*/
             push =
               "本人にラインしてあげて！きっと寂しがってるよ！"
+          when /.*(おやすみ).*/
+            word = 
+              ["うん！おやすみなさーい！いい夢見れます様に(^ ^)",
+               "もう寝ちゃうの？まだお話ししたいなぁ〜",
+               "あったかくして寝るんだよ^ - ^"].sample
+            push = 
+              "また明日ね〜　\n#{word}"
           else
             per06to12 = doc.elements[xpath + 'info/rainfallchance/period[2]l'].text
             per12to18 = doc.elements[xpath + 'info/rainfallchance/period[3]l'].text
