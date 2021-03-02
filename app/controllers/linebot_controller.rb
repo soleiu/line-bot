@@ -80,7 +80,7 @@ class LinebotController < ApplicationController
                "またシバエナガとお散歩してね☆"].sample
             push =
               "お仕事お疲れ様(*^^*)！このラインで少しでも癒されます様に！\n#{word}"
-          when /.*(めぐちゃん|めぐ).*/
+          when /.*(めぐちゃん|めぐ|meg).*/
             push =
               "本人にラインしてあげて！きっと寂しがってるよ！"
           when /.*(おやすみ).*/
@@ -92,6 +92,9 @@ class LinebotController < ApplicationController
               ].sample
             push = 
               "また明日ね〜　\n#{word}"
+          when /.*(バイク|ばいく|単車).*/
+            push =
+              "バイク好きなの？？なんのバイク乗ってるのかなー？？今度乗せてね！私はオフロードに興味あり！"
           else
             per06to12 = doc.elements[xpath + 'info/rainfallchance/period[2]l'].text
             per12to18 = doc.elements[xpath + 'info/rainfallchance/period[3]l'].text
