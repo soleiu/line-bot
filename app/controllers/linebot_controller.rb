@@ -80,7 +80,7 @@ class LinebotController < ApplicationController
                "またシバエナガとお散歩してね☆"].sample
             push =
               "お仕事お疲れ様(*^^*)！このラインで少しでも癒されます様に！\n#{word}"
-          when /.*(めぐちゃん).*/
+          when /.*(めぐちゃん|めぐ).*/
             push =
               "本人にラインしてあげて！きっと寂しがってるよ！"
           when /.*(おやすみ).*/
