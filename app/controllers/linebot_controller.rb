@@ -110,6 +110,9 @@ class LinebotController < ApplicationController
           when /.*(おふろ|お風呂).*/
             push = 
               "おふろ一緒に連れてってぇ〜(*^◯^*)"
+          when /.*(シバエナガ).*/
+            push = 
+              "シバエナガは私のこと！飼い主はめぐちゃん！いつも可愛がってくれてるんだよ〜"
           else
             per06to12 = doc.elements[xpath + 'info/rainfallchance/period[2]l'].text
             per12to18 = doc.elements[xpath + 'info/rainfallchance/period[3]l'].text
