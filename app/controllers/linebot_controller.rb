@@ -132,7 +132,6 @@ class LinebotController < ApplicationController
             push = 
               "うん、お疲れ様でした！早くお風呂入らなくっちゃ！！"
           when /.*(今日|きょう|).*/
-          else 
             per06to12 = doc.elements[xpath + 'info/rainfallchance/period[2]l'].text
             per12to18 = doc.elements[xpath + 'info/rainfallchance/period[3]l'].text
             per18to24 = doc.elements[xpath + 'info/rainfallchance/period[4]l'].text
@@ -153,7 +152,6 @@ class LinebotController < ApplicationController
               push =
                 "今日の天気？\n今日は雨は降らなさそうだよ。\n#{word}"
             end
-          end
         # テキスト以外（画像等）のメッセージが送られた場合
       else
         push = "テキスト以外はわからないよ〜(´・ω・｀)"
