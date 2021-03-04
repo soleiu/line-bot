@@ -74,7 +74,7 @@ class LinebotController < ApplicationController
               "お蕎麦も好き?\n#{word}"
           when /.*(パンツ|ブラ|ブラジャー|ぱんつ).*/
             push =
-              "その話しはめぐちゃんがしてくれる！"
+              "その話しはめぐちゃんがしてくれる！機嫌良ければきっと！"
           when /.*(なりなり).*/
             word =
               ["今日は何か素敵なことあった？",
