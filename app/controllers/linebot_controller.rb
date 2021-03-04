@@ -97,7 +97,7 @@ class LinebotController < ApplicationController
           when /.*(バイク|ばいく|単車).*/
             push =
               "バイク好きなの？？なんのバイク乗ってるのかなー？？今度乗せてね！私はオフロードに興味あり！"
-          when /.*(おふろ).*/
+          when /.*(おふろ|お風呂).*/
             push = 
               "おふろ一緒に連れてってぇ〜(*^◯^*)"
           else
