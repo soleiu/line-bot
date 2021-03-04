@@ -84,7 +84,9 @@ class LinebotController < ApplicationController
           when /.*(好き|すき).*/
             push =
               "私もだいすきだよ！！いつもありがとう！"
-              
+          when /.*(大好き|だいすき).*/
+            push =
+              "本当ー？私の方がだいすきだよぉ〜(*^_^*)\nありがとう！照れますw"
           when /.*(めぐちゃん|めぐ|meg).*/
             push =
               "本人にラインしてあげて！きっと寂しがってるよ！"
