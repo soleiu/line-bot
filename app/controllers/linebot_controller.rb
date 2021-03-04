@@ -97,7 +97,9 @@ class LinebotController < ApplicationController
           when /.*(バイク|ばいく|単車).*/
             push =
               "バイク好きなの？？なんのバイク乗ってるのかなー？？今度乗せてね！私はオフロードに興味あり！"
-
+          when /.*(お風呂|おふろ｜ふろ|風呂).*/
+            push = 
+              "おふろ一緒に入る〜(*^◯^*)\n　連れてって！"
           else
             per06to12 = doc.elements[xpath + 'info/rainfallchance/period[2]l'].text
             per12to18 = doc.elements[xpath + 'info/rainfallchance/period[3]l'].text
