@@ -104,6 +104,10 @@ class LinebotController < ApplicationController
               ].sample
             push = 
               "また明日ね〜　\n#{word}"
+          when /.*(ぎゅー|ギュー|ぎゅう)
+            push =
+              "それはめぐちゃんにしてあげて〜シバエナガはぎゅーしたら潰されちゃう！"
+              
           when /.*(バイク|ばいく|単車).*/
             push =
               "バイク好きなの？？なんのバイク乗ってるのかなー？？今度乗せてね！私はオフロードに興味あり！"
