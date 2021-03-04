@@ -87,7 +87,8 @@ class LinebotController < ApplicationController
           when /.*(好き|すき).*/
             word =
               ["私もだいすきだよ！！いつもありがとう！",
-                "本当ー？私の方がだいすきだよぉ〜(*^_^*)\nありがとう！照れますw"
+                "本当ー？私の方がだいすきだよぉ〜(*^_^*)\nありがとう！照れますw",
+                "今度、どこかデートしようね！"
               ].sample
             push =
               "え！！\n#{word}"
