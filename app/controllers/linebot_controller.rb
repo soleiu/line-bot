@@ -106,7 +106,7 @@ class LinebotController < ApplicationController
                "明日夢のお話し聞かせてね！",
                "トントンして子守唄歌ってあげる〜"].sample
             push = 
-              "また明日ね〜　\n#{word}"　
+              "また明日ね〜　\n#{word}"
           when /.*(会いたい|あいたい).*/
             push =
               "私も一緒だよ！パタパタ飛んでいくからおうち開けててね！"
@@ -115,7 +115,7 @@ class LinebotController < ApplicationController
               "それはめぐちゃんにしてあげて〜シバエナガはぎゅーしたら潰されちゃう！"
           when /.*(サックス).*/
             push =
-              "私はあるとサックス好き！今度吹いてみて〜聞きたい聞きたい！！"
+              "私はアルトサックス好き！今度吹いてみて〜聞きたい聞きたい！！"
           when /.*(snoopy|スヌーピー).*/
             push = 
               "知ってた？お誕生日は8月なんだよ！だいすきなの！"
