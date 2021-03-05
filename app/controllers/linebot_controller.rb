@@ -106,7 +106,7 @@ class LinebotController < ApplicationController
                "明日夢のお話し聞かせてね！",
                "トントンして子守唄歌ってあげる〜"].sample
             push = 
-              "また明日ね〜　\n#{word}"
+              "また明日ね〜　\n#{word}"　
           when /.*(会いたい|あいたい).*/
             push =
               "私も一緒だよ！パタパタ飛んでいくからおうち開けててね！"
@@ -119,6 +119,9 @@ class LinebotController < ApplicationController
           when /.*(snoopy|スヌーピー).*/
             push = 
               "知ってた？お誕生日は8月なんだよ！だいすきなの！"
+          when /.*(ゲンガー).*/
+            push = 
+              "全ポケモンの中でもトップクラスの攻撃種族値をもつ。\nゴーストタイプの中でも高い攻撃力を持つのでゴースト技で弱点を突きたい場合に最適のポケモン。\nタイプはゴースト　どく　満月の夜に自分の影が勝手に笑って動くのはゲンガーの仕業なのかも！\nじめん、エスパー、ゴースト、あくタイプにばつぐん！"
           when /.*(バイク|ばいく|単車).*/
             push =
               "バイク好きなの？？なんのバイク乗ってるのかなー？？今度乗せてね！私はオフロードに興味あり！"
@@ -135,7 +138,6 @@ class LinebotController < ApplicationController
             per06to12 = doc.elements[xpath + 'info/rainfallchance/period[2]l'].text
             per12to18 = doc.elements[xpath + 'info/rainfallchance/period[3]l'].text
             per18to24 = doc.elements[xpath + 'info/rainfallchance/period[4]l'].text
-            pp "aaa"
             if per06to12.to_i >= min_per || per12to18.to_i >= min_per || per18to24.to_i >= min_per
               word =
                 ["雨だけど元気出していこうね！",
