@@ -105,7 +105,7 @@ class LinebotController < ApplicationController
               "え！！\n#{word}"
           when /.*(めぐちゃん|めぐ|meg).*/
             push =
-              "本人にラインしてあげて！きっと寂しがってるよ！"
+              "本人にラインしてあげて！きっと寂しがってるよ！てゆーか寂しいって言ってる！！"
           when /.*(おやすみ).*/
             word = 
               ["うん！おやすみなさーい！いい夢見れます様に(^ ^)",
@@ -155,8 +155,7 @@ class LinebotController < ApplicationController
             push =
               "高気圧に覆われてめっちゃ天気いいかも(^ ^)！遊びに連れてって〜！！"
 
-          when /.*(メグエナガ｜めぐエナガ).*/
-            pp "aaa"
+          when /.*(メグエナガ|めぐエナガ).*/
             word = 
               ["メグエナガは最近外から飛んできたの！突然おうちにいたんだよ！びっくり！",
                "メグエナガはシバエナガよりも天気のこと詳しいんだけど、私のことも忘れないでね？",
@@ -165,8 +164,6 @@ class LinebotController < ApplicationController
                "メグエナガはゲンガーが好きみたい。いつもゲンガーの上に止まってるんだよ！！"].sample
             push = 
               "あ！！最近ヤキモチ焼いてたの！！！！　\n#{word}"
-          
-
           when /.*(今日|きょう|).*/
             per06to12 = doc.elements[xpath + 'info/rainfallchance/period[2]l'].text
             per12to18 = doc.elements[xpath + 'info/rainfallchance/period[3]l'].text
