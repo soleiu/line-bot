@@ -169,6 +169,7 @@ class LinebotController < ApplicationController
             per12to18 = doc.elements[xpath + 'info/rainfallchance/period[3]l'].text
             per18to24 = doc.elements[xpath + 'info/rainfallchance/period[4]l'].text
             if per06to12.to_i >= min_per || per12to18.to_i >= min_per || per18to24.to_i >= min_per
+              pp "aaa"
               word =
                 ["雨だけど元気出していこうね！",
                   "雨に負けずファイト！！",
