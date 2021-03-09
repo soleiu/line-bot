@@ -145,6 +145,16 @@ class LinebotController < ApplicationController
           when /.*(宝くじ).*/
             push =
               "あ！！！当たったの？山分け山分け〜(o^^o)\nなに買おっかー！！！"
+          when /.*(頑張って|頑張る).*/
+            push =
+              "ありがとう！いろんな事たくさんあるけれど、頑張って行こうね☆"
+          when /.*(低気圧).*/
+            push =
+              "偏頭痛持ちかな？大変だよね！無理しないでね！"
+          when /.*(高気圧).*/
+            push =
+              "高気圧に覆われてめっちゃ天気いいかも(^ ^)！遊びに連れてって〜！！"
+
           when /.*(今日|きょう|).*/
             per06to12 = doc.elements[xpath + 'info/rainfallchance/period[2]l'].text
             per12to18 = doc.elements[xpath + 'info/rainfallchance/period[3]l'].text
