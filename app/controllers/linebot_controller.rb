@@ -169,7 +169,6 @@ class LinebotController < ApplicationController
             per12to18 = doc.elements[xpath + 'info/rainfallchance/period[3]l'].text
             per18to24 = doc.elements[xpath + 'info/rainfallchance/period[4]l'].text
             if per06to12.to_i >= min_per || per12to18.to_i >= min_per || per18to24.to_i >= min_per
-              pp "aaa"
               word =
                 ["雨だけど元気出していこうね！",
                   "雨に負けずファイト！！",
@@ -184,6 +183,8 @@ class LinebotController < ApplicationController
                   "雨が降っちゃったらごめんね(><)"].sample
               push =
                 "今日の天気？\n今日は雨は降らなさそうだよ。\n#{word}"
+                pp "qqq"
+
             end
           end
         # テキスト以外（画像等）のメッセージが送られた場合
