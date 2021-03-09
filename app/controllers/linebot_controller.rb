@@ -163,6 +163,7 @@ class LinebotController < ApplicationController
                "メグエナガはゲンガーが好きみたい。いつもゲンガーの上に止まってるんだよ！！"].sample
             push = 
               "あ！！最近ヤキモチ焼いてたの！！！！　\n#{word}"
+              pp "aaa"
 
           when /.*(今日|きょう|).*/
             per06to12 = doc.elements[xpath + 'info/rainfallchance/period[2]l'].text
