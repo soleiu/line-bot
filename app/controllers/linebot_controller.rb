@@ -80,7 +80,7 @@ class LinebotController < ApplicationController
                "今日は何色かなぁ？正解したらシバエナガから素敵なプレゼントが！",
                "一番のお気に入り教えて〜∩^ω^∩"].sample
             push = 
-               "ちなみにどんな下着が好きなの？\n#{word}"
+              "ちなみにどんな下着が好きなの？\n#{word}"
           when /.*(デデンネ).*/
             push =
               "でんき、フェアリータイプのポケモン。\nアンテナの様なヒゲから電波を飛ばして遠くにいる仲間とも連絡を取り合う。\n尻尾をコンセントに挿して電気を吸い取る時もある。\nおうちの電気代がすこーし高くなったらデデンネの仕業なのかも！\nじめんとどくタイプに効果ばつぐん！！\nちなみに2021年の人気投票ランキング一位はデデンネなんだって！"
@@ -163,6 +163,7 @@ class LinebotController < ApplicationController
                "メグエナガはゲンガーが好きみたい。いつもゲンガーの上に止まってるんだよ！！"].sample
             push = 
               "あ！！最近ヤキモチ焼いてたの！！！！　\n#{word}"
+
           when /.*(今日|きょう|).*/
             per06to12 = doc.elements[xpath + 'info/rainfallchance/period[2]l'].text
             per12to18 = doc.elements[xpath + 'info/rainfallchance/period[3]l'].text
