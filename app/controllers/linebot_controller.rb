@@ -174,8 +174,8 @@ class LinebotController < ApplicationController
                   "雨に負けずファイト！！",
                   "雨だけどああたの明るさでみんなを元気にしてあげて(*^^)*"].sample
               push =
-                "今日の天気？\n今日は雨が降りそうだから傘があった方が安心だよ。\n　  6〜12時　#{per06to12}％\n　12〜18時　 #{per12to18}％\n　18〜24時　#{per18to24}％\n#{word}"
-                pp "aaa"
+                "今日の天気？\n今日は雨が降りそうだから傘があった方が安心だよ。\n　6〜12時　#{per06to12}％\n　12〜18時　 #{per12to18}％\n　18〜24時　#{per18to24}％\n#{word}"
+                pp "QQQ"
             else
               word =
                 ["天気もいいからウォーキングしてみるのはどう？(o^^o)",
