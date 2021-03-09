@@ -154,7 +154,9 @@ class LinebotController < ApplicationController
           when /.*(高気圧).*/
             push =
               "高気圧に覆われてめっちゃ天気いいかも(^ ^)！遊びに連れてって〜！！"
+
           when /.*(メグエナガ｜めぐエナガ).*/
+            pp "aaa"
             word = 
               ["メグエナガは最近外から飛んできたの！突然おうちにいたんだよ！びっくり！",
                "メグエナガはシバエナガよりも天気のこと詳しいんだけど、私のことも忘れないでね？",
@@ -163,7 +165,7 @@ class LinebotController < ApplicationController
                "メグエナガはゲンガーが好きみたい。いつもゲンガーの上に止まってるんだよ！！"].sample
             push = 
               "あ！！最近ヤキモチ焼いてたの！！！！　\n#{word}"
-              pp "aaa"
+          
 
           when /.*(今日|きょう|).*/
             per06to12 = doc.elements[xpath + 'info/rainfallchance/period[2]l'].text
