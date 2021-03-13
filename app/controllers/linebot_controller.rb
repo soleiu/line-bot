@@ -120,6 +120,10 @@ class LinebotController < ApplicationController
               ].sample
             push =
               "え！！\n#{word}"
+          when /.*(犬|わんこ).*/
+            push =
+              "犬は可愛いよね！だいすきなの！アイリッシュセターとシュナウザーとシェルティーが好き！"
+
           when /.*(快活).*/
             push =
               "最近メグちゃんと一緒に行ってるところ！いつもお話し聞いてるよ（＾∇＾）　楽しいって言ってたよ〜"
