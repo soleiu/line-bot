@@ -166,6 +166,7 @@ class LinebotController < ApplicationController
                 "カービィーのコピーで何が好きだった？シバエナガはスリープが好き！"].sample
             push = 
               "またカービィーやりたいねぇ！！！！　\n#{word}"
+              
           when /.*(メグエナガ|めぐエナガ).*/
             word = 
               ["メグエナガは最近外から飛んできたの！突然おうちにいたんだよ！びっくり！",
