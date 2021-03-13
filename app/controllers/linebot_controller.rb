@@ -110,7 +110,7 @@ class LinebotController < ApplicationController
           when /.*(なりなり).*/
             word =
               ["今日は何か素敵なことあった？",
-               "だいすきだよ〜"
+               "だいすきだよ〜",
                "お昼は今日は何食べたの？",
                "また漫画読みに行かなくちゃ！",
                "いつもいつも連絡ありがとうo(^-^)o",
