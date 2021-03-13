@@ -84,6 +84,9 @@ class LinebotController < ApplicationController
           when /.*(寂しい).*/
             push =
               "寂しかった！いつでもラインしてぇ"
+          when /.*(チョコ).*/
+            push =
+              "手作りチョコレート今度作って届けるね！君とどけ！"
           when /.*(コーヒー|紅茶).*/
             push =
               "私はハーブティーが好き！あなたは何が好き？？"
