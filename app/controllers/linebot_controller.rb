@@ -120,6 +120,9 @@ class LinebotController < ApplicationController
           when /.*(めぐちゃん|めぐ|meg).*/
             push =
               "本人にラインしてあげて！きっと寂しがってるよ！てゆーか寂しいって言ってる！！"
+          when /.*(結婚|けっこん).*/
+            push =
+              "結婚してくれるの？プロポーズ！？めっちゃ嬉しい〜(o^^o)"
           when /.*(おやすみ).*/
             word = 
               ["うん！おやすみなさーい！いい夢見れます様に(^ ^)",
