@@ -81,6 +81,9 @@ class LinebotController < ApplicationController
                "讃岐うどんはどうー？？"].sample
             push = 
               "お蕎麦も好き?\n#{word}"
+          when /.*(寂しい).*/
+            push =
+              "寂しかった！いつでもラインしてぇ"
           when /.*(コーヒー|紅茶).*/
             push =
               "私はハーブティーが好き！あなたは何が好き？？"
