@@ -4,6 +4,9 @@ class LinebotController < ApplicationController
   require 'kconv'
   require 'rexml/document'
 
+  protect_from_forgery :except => [:callback]
+
+
   def callback
     body = request.body.read
     signature = request.env['HTTP_X_LINE_SIGNATURE']
@@ -33,7 +36,6 @@ class LinebotController < ApplicationController
             per12to18 = doc.elements[xpath + 'info[2]/rainfallchance/period[3]'].text
             per18to24 = doc.elements[xpath + 'info[2]/rainfallchance/period[4]'].text
             if per06to12.to_i >= min_per || per12to18.to_i >= min_per || per18to24.to_i >= min_per
-              pp "aaa"
               push =
                 "明日の天気だよね。\n明日は雨が降りそうだよ(>_<)\n今のところ降水確率はこんな感じだよ。\n　  6〜12時　#{per06to12}％\n　12〜18時　 #{per12to18}％\n　18〜24時　#{per18to24}％\nまた明日の朝の最新の天気予報で雨が降りそうだったら教えるね！"
             else
@@ -155,7 +157,15 @@ class LinebotController < ApplicationController
           when /.*(高気圧).*/
             push =
               "高気圧に覆われてめっちゃ天気いいかも(^ ^)！遊びに連れてって〜！！"
-
+          when /.*(カービー|カービィー).*/
+            word = 
+              ["シバエナガもカービー好き！ピッピに似てるよね！！",
+                "昔、カービー何が好きだった？？",
+                "デデデ大王が好きでね、メグちゃんは密かにデデデ大王の充電ケーブル持ってるんだよ！ナイショだよ〜",
+                "カービィーの春風と共にって知ってる？",
+                "カービィーのコピーで何が好きだった？シバエナガはスリープが好き！"].sample
+            push = 
+              "またカービィーやりたいねぇ！！！！　\n#{word}"
           when /.*(メグエナガ|めぐエナガ).*/
             word = 
               ["メグエナガは最近外から飛んできたの！突然おうちにいたんだよ！びっくり！",
