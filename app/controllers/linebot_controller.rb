@@ -33,6 +33,7 @@ class LinebotController < ApplicationController
             per06to12 = doc.elements[xpath + 'info[2]/rainfallchance/period[2]'].text
             per12to18 = doc.elements[xpath + 'info[2]/rainfallchance/period[3]'].text
             per18to24 = doc.elements[xpath + 'info[2]/rainfallchance/period[4]'].text
+            puts "per06to12: " + per06to12 +  " per12to18: " +  per12to18 + " per18to24: " + per18to24
             if per06to12.to_i >= min_per || per12to18.to_i >= min_per || per18to24.to_i >= min_per
             pp "AAA"
               push =
@@ -187,7 +188,7 @@ class LinebotController < ApplicationController
               "うん、お疲れ様でした！早くお風呂入らなくっちゃ！！"
           when /.*(宝くじ).*/
             push =
-              "あ！！！当たったの？山分け山分け〜(o^^o)\nなに買おっかー！！！"
+              "あ！！！当たったの？山分け山分け〜(o^^o)\nなに買おっかー！！！島だったね！キレイな海♡"
           when /.*(頑張って|頑張る).*/
             push =
               "ありがとう！いろんな事たくさんあるけれど、頑張って行こうね☆"
