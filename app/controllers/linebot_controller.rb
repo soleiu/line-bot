@@ -25,7 +25,6 @@ class LinebotController < ApplicationController
           xml  = open( url ).read.toutf8
           doc = REXML::Document.new(xml)
           xpath = 'weatherforecast/pref/area[4]/'
-          pp "AAA"
           # 当日朝のメッセージの送信の下限値は20％ 明日・明後日雨が降るかどうかの下限値は30％としている
           min_per = 30
           case input
@@ -49,7 +48,7 @@ class LinebotController < ApplicationController
               push =
                 "明後日の天気？\n気が早いねー！何かあるの？？\n明後日は雨は降らない予定だよ(^^)\nまた当日の朝の最新の天気予報で雨が降りそうだったら教えるからね！"
             end
-            
+
           when /.*(トトロ).*/
             push =
               "見たことある？私はあるんだよ〜　すっごく大きいのと、中くらいのと、小さいのがいるんだよ〜\n真っ黒いススみたいなのもいるんだよ〜"
