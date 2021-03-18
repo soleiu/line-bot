@@ -29,11 +29,11 @@ class LinebotController < ApplicationController
           min_per = 30
           case input
           when /.*(明日|あした).*/
+            pp "AAA"
             # info[2]：明日の天気
             per06to12 = doc.elements[xpath + 'info[2]/rainfallchance/period[2]'].text
             per12to18 = doc.elements[xpath + 'info[2]/rainfallchance/period[3]'].text
             per18to24 = doc.elements[xpath + 'info[2]/rainfallchance/period[4]'].text
-            pp "AAA"
             puts "per06to12: " + per06to12 +  " per12to18: " +  per12to18 + " per18to24: " + per18to24
             if per06to12.to_i >= min_per || per12to18.to_i >= min_per || per18to24.to_i >= min_per
               push =
