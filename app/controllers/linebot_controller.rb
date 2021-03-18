@@ -27,9 +27,9 @@ class LinebotController < ApplicationController
           xpath = 'weatherforecast/pref/area[4]/'
           # 当日朝のメッセージの送信の下限値は20％ 明日・明後日雨が降るかどうかの下限値は30％としている
           min_per = 30
+          PP "AAA"
           case input
           when /.*(明日|あした).*/
-            pp "AAA"
             # info[2]：明日の天気
             per06to12 = doc.elements[xpath + 'info[2]/rainfallchance/period[2]'].text
             per12to18 = doc.elements[xpath + 'info[2]/rainfallchance/period[3]'].text
