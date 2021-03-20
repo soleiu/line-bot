@@ -59,8 +59,8 @@ task :update_feed => :environment do
     puts response
     puts message
     puts "push: " + push
-  user_ids = User.all.pluck(:line_id)
-  puts "user_ids: " + user_ids.join(',')
+    user_ids = User.all.pluck(:line_id)
+    puts "user_ids: " + user_ids.join(',')
   end
   "OK"
 end
