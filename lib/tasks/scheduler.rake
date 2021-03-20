@@ -24,6 +24,9 @@ task :update_feed => :environment do
   # メッセージを発信する降水確率の下限値の設定
   min_per = 20
   puts "per06to12: " + per06to12 +  " per12to18: " +  per12to18 + " per18to24: " + per18to24
+  puts "push: " + push
+  user_ids = User.all.pluck(:line_id)
+  puts "user_ids: " + user_ids.join(',')
   #if per06to12.to_i >= min_per || per12to18.to_i >= min_per || per18to24.to_i >= min_per
     #word1 =
       #["いい朝だね♡",
@@ -59,8 +62,5 @@ task :update_feed => :environment do
    # puts response
    # puts message
   #end
-  puts "push: " + push
-  user_ids = User.all.pluck(:line_id)
-  puts "user_ids: " + user_ids.join(',')
   "OK"
 end
