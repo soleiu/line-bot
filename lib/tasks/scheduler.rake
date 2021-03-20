@@ -39,7 +39,7 @@ task :update_feed => :environment do
        "雨に負けずに今日も頑張ってね(^^)",
        "今日も一日楽しんでいこうね(^^)",
        "楽しいことがありますように！！"].sample
-     降水確率によってメッセージを変更する閾値の設定
+     #降水確率によってメッセージを変更する閾値の設定
     mid_per = 50
     if per06to12.to_i >= mid_per || per12to18.to_i >= mid_per || per18to24.to_i >= mid_per
       word3 = "今日は雨が降りそうだから傘を忘れないでね！"
@@ -54,7 +54,7 @@ task :update_feed => :environment do
     user_ids = User.all.pluck(:line_id)
     puts "user_ids: " + user_ids.join(',')
 
-    
+
     message = {
       type: 'text',
       text: push
