@@ -45,7 +45,7 @@ task :update_feed => :environment do
       word3 = "今日は雨が降りそうだから傘を忘れないでね！"
     else
       word3 = "今日は雨が降るかもしれないから折りたたみ傘があると安心だよ〜！"
-    #end
+    end
      発信するメッセージの設定
     push =
       "#{word1}\n#{word3}\n降水確率はこんな感じだよ。\n　  6〜12時　#{per06to12}％\n　12〜18時　 #{per12to18}％\n　18〜24時　#{per18to24}％\n#{word2}"
@@ -61,6 +61,6 @@ task :update_feed => :environment do
     puts response
     puts message
     user_ids = User.all.pluck(:line_id)
-  end
+  #end
   "OK"
 end
