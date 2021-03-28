@@ -92,7 +92,7 @@ class LinebotController < ApplicationController
               ["うどん好きなの？私もすごく好き！今日も食べる！",
                "手作りうどん食べたいなぁ！",
                "どんなうどんが好きなの？",
-               "武蔵野うどんは好きー？？"
+               "武蔵野うどんは好きー？？",
                "讃岐うどんはどうー？？"].sample
             push = 
               "お蕎麦も好き?\n#{word}"
