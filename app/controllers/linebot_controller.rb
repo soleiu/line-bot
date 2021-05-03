@@ -54,6 +54,7 @@ class LinebotController < ApplicationController
             end
           case input 
           when /.*(気温|きおん｜寒い｜暖かい｜さむい｜あたたかい｜あったかい).*/
+            PP"aaa"
             rangecentigrade_max = doc.elements[xpath + 'info[1]/temperatureunit/range[1]'].text
             rangecentigrade_min = doc.elements[xpath + 'info[1]/temperatureunit/range[2]'].text
             puts "rangecentigrade_max: " + rangecentigrade_max +  "rangecentigrade_min: " + rangecentigrade_min
