@@ -58,8 +58,7 @@ class LinebotController < ApplicationController
             rangecentigrade_min = doc.elements[xpath + 'info[1]/temperatureunit/range[2]'].text
             puts "rangecentigrade_max: " + rangecentigrade_max +  "rangecentigrade_min: " + rangecentigrade_min
               push =
-                "今日の気温はね\n今のところこんな感じだよ〜（＾ω＾）\n    最高気温　#{rangecentigrade_max}℃\n    最低気温　#{rangecentigrade_min}℃
-  
+                "今日の気温はね\n今のところこんな感じだよ〜（＾ω＾）\n    最高気温　#{rangecentigrade_max}℃\n    最低気温　#{rangecentigrade_min}℃になる予定だよ〜"
           when /.*(トトロ).*/
             word =
             ["ジブリシリーズではめぐちゃんは一番好きなんだって！トトロの話しするとめっちゃ興奮するよ！",
