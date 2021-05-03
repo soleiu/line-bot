@@ -53,8 +53,8 @@ class LinebotController < ApplicationController
                 "明後日の天気？\n気が早いねー！何かあるの？？\n明後日は雨は降らない予定だよ(^^)\nまた当日の朝の最新の天気予報で雨が降りそうだったら教えるからね！"
             end
           case input 
+            pp "AAA"
           when /.*(気温|きおん｜寒い｜暖かい｜さむい｜あたたかい｜あったかい).*/
-            PP"aaa"
             rangecentigrade_max = doc.elements[xpath + 'info[1]/temperatureunit/range[1]'].text
             rangecentigrade_min = doc.elements[xpath + 'info[1]/temperatureunit/range[2]'].text
             puts "rangecentigrade_max: " + rangecentigrade_max +  "rangecentigrade_min: " + rangecentigrade_min
