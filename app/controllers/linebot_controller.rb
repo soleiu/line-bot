@@ -4,7 +4,6 @@ class LinebotController < ApplicationController
   require 'kconv'
   require 'rexml/document'
 
-
   def callback
     body = request.body.read
     signature = request.env['HTTP_X_LINE_SIGNATURE']
@@ -51,15 +50,7 @@ class LinebotController < ApplicationController
             else
               push =
                 "明後日の天気？\n気が早いねー！何かあるの？？\n明後日は雨は降らない予定だよ(^^)\nまた当日の朝の最新の天気予報で雨が降りそうだったら教えるからね！"
-            end
-            pp"AAA"
-          case input 
-          when /.*(気温|きおん｜寒い｜暖かい｜さむい｜あたたかい｜あったかい).*/
-            rangecentigrade_max = doc.elements[xpath + 'info[1]/temperatureunit/range[1]'].text
-            rangecentigrade_min = doc.elements[xpath + 'info[1]/temperatureunit/range[2]'].text
-            puts "rangecentigrade_max: " + rangecentigrade_max +  "rangecentigrade_min: " + rangecentigrade_min
-              push =
-                "今日の気温はね\n今のところこんな感じだよ〜（＾ω＾）\n    最高気温　#{rangecentigrade_max}℃\n    最低気温　#{rangecentigrade_min}℃になる予定だよ〜"
+            end 
           when /.*(トトロ).*/
             word =
             ["ジブリシリーズではめぐちゃんは一番好きなんだって！トトロの話しするとめっちゃ興奮するよ！",
