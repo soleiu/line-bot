@@ -256,6 +256,13 @@ class LinebotController < ApplicationController
                "メグエナガはゲンガーが好きみたい。いつもゲンガーの上に止まってるんだよ！！"].sample
             push = 
               "あ！！最近ヤキモチ焼いてたの！！！！　\n#{word}"
+          when /.*(おそ松さん|おそまつ|おそまつさん).*/
+            word =
+            ["本当は好きだけど内緒にしていたの。めぐちゃんは一松が好き！あなたは？",
+              "UFOキャッチャーでたくさんグッズ取ったんだよー(^^)",
+              "なんの会が好き？私は家族ドラフト会議のやつ",].sample
+            push =
+              "\n#{word}　やっぱり、はたぼうと仲良くなりたいよね〜"　
           when /.*(今日|きょう|).*/
             per06to12 = doc.elements[xpath + 'info/rainfallchance/period[2]l'].text
             per12to18 = doc.elements[xpath + 'info/rainfallchance/period[3]l'].text
