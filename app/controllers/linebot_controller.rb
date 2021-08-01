@@ -262,7 +262,7 @@ class LinebotController < ApplicationController
                 "UFOキャッチャーでたくさんグッズ取ったんだよー(^^)",
                 "なんの会が好き？私は家族ドラフト会議のやつ"].sample
             push =
-              "やっぱり、はたぼうと仲良くなりたいよね〜♡　\n#{word}"　
+              "やっぱり、はたぼうと仲良くなりたいよね〜♡　\n#{word}"
           when /.*(今日|きょう|).*/
             per06to12 = doc.elements[xpath + 'info/rainfallchance/period[2]l'].text
             per12to18 = doc.elements[xpath + 'info/rainfallchance/period[3]l'].text
