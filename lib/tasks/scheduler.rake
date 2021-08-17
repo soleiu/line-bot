@@ -22,7 +22,7 @@ task :update_feed => :environment do
   per12to18 = doc.elements[xpath + 'period[3]'].text
   per18to24 = doc.elements[xpath + 'period[4]'].text
   # メッセージを発信する降水確率の下限値の設定
-  min_per = 20
+  min_per = 100
   puts "per06to12: " + per06to12 +  " per12to18: " +  per12to18 + " per18to24: " + per18to24
   if per06to12.to_i >= min_per || per12to18.to_i >= min_per || per18to24.to_i >= min_per
     word1 =
