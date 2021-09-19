@@ -272,6 +272,9 @@ class LinebotController < ApplicationController
                 "なんの会が好き？私は家族ドラフト会議のやつ"].sample
             push =
               "やっぱり、はたぼうと仲良くなりたいよね〜♡　\n#{word}"
+          when /.*(フィルター|空気清浄機|).*/
+            push =
+              "お掃除えらいね！すごい！だけど。。。お薬たくさん入れすぎちゃった…？"
           when /.*(今日|きょう|).*/
             per06to12 = doc.elements[xpath + 'info/rainfallchance/period[2]l'].text
             per12to18 = doc.elements[xpath + 'info/rainfallchance/period[3]l'].text
