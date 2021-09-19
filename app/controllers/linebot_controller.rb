@@ -272,7 +272,7 @@ class LinebotController < ApplicationController
                 "なんの会が好き？私は家族ドラフト会議のやつ"].sample
             push =
               "やっぱり、はたぼうと仲良くなりたいよね〜♡　\n#{word}"
-          when /.*(フィルター|空気清浄機|).*/
+          when /.*(フィルター|空気清浄機|ふぃるたー).*/
             push =
               "お掃除えらいね！すごい！だけど。。。お薬たくさん入れすぎちゃった…？"
           when /.*(今日|きょう|).*/
