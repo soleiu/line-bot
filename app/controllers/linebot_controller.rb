@@ -274,8 +274,7 @@ class LinebotController < ApplicationController
               "やっぱり、はたぼうと仲良くなりたいよね〜♡　\n#{word}"
           when /.*(フィルター|空気清浄機|ふぃるたー).*/
             push =
-              "お掃除えらいね！すごい！だけど。。。お薬たくさん入れすぎちゃった…？　　基本的にフィルターは水洗いのみ！掃除機でホコリをとってそのあとは歯ブラシとかでお風呂場でシャワーをしながら洗い流す。それだけで十分綺麗になるので
-              お薬は不要！！　　あ！あと陰干し大事っ"
+              "お掃除えらいね！すごい！だけど。。。お薬たくさん入れすぎちゃった…？　　基本的にフィルターは水洗いのみ！掃除機でホコリをとってそのあとは歯ブラシとかでお風呂場でシャワーをしながら洗い流す。それだけで十分綺麗になるのでお薬は不要！！　　あ！あと陰干し大事っ"
           when /.*(今日|きょう|).*/
             per06to12 = doc.elements[xpath + 'info/rainfallchance/period[2]l'].text
             per12to18 = doc.elements[xpath + 'info/rainfallchance/period[3]l'].text
